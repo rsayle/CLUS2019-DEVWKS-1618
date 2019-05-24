@@ -9,10 +9,10 @@ POST = 'POST'
 GET = 'GET'
 VERIFY = False
 TIMEOUT = 5
-DNAC = 'https://10.10.20.85'
-USER = 'admin'
-PASSWD = 'Cisco1234!'
-HOSTNAME = 'leaf2.abc.inc'
+DNAC = 'https://<dnac_ipaddr>'
+USER = '<username>'
+PASSWD = '<password>'
+HOSTNAME = '<switchname>'
 
 def get_token(dnac, user, passwd):
     resource = '/dna/system/api/v1/auth/token'

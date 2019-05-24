@@ -144,8 +144,8 @@ template = get_template(DNAC, token, TEMPLATE)
 
 # build the template parameter values
 parameters = {}
-parameters['interface'] = 't1/0/10'
-parameters['description'] = 'Configured by exercise 4'
+parameters['interface'] = '<switch_interface>'
+parameters['description'] = '<interface_description>'
 
 # deploy the template
 task = deploy_template(DNAC, token, switch, template, parameters)

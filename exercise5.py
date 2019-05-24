@@ -16,8 +16,8 @@ template.target_id = switch.get_id_by_device_name(switch.name)
 template.target_type = TARGET_BY_ID
 
 # input the template parameters
-template.versioned_template_params['interface'] = 't1/0/10'
-template.versioned_template_params['description'] = 'Configured by exercise 5.4'
+template.versioned_template_params['interface'] = '<switch_interface>'
+template.versioned_template_params['description'] = '<interface_description>'
 
 # push the template
 template.deploy_sync(3)
