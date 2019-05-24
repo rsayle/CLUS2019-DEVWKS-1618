@@ -1,0 +1,342 @@
+{
+	"info": {
+		"_postman_id": "eb7c382c-396f-4c97-bb1a-57b6a843932f",
+		"name": "CLUS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get a token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Cisco1234!",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://10.10.20.85/dna/system/api/v1/auth/token",
+					"protocol": "https",
+					"host": [
+						"10",
+						"10",
+						"20",
+						"85"
+					],
+					"path": [
+						"dna",
+						"system",
+						"api",
+						"v1",
+						"auth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all devices",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1YmU1ZmNhZGVlOWE2NzAwNGNmOTRkNmUiLCJhdXRoU291cmNlIjoiaW50ZXJuYWwiLCJ0ZW5hbnROYW1lIjoiVE5UMCIsInJvbGVzIjpbIjViZTVmY2FjZWU5YTY3MDA0Y2Y5NGQ2ZCJdLCJ0ZW5hbnRJZCI6IjViZTVmY2FhZWU5YTY3MDA0Y2Y5NGQ2YiIsImV4cCI6MTU1ODY0MDI3OCwidXNlcm5hbWUiOiJhZG1pbiJ9.h-oVyG_WwBcYEPKM2LcB4pu7VFfhwlyq8IRuZW2LGZ8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://10.10.20.85/api/v1/network-device",
+					"protocol": "https",
+					"host": [
+						"10",
+						"10",
+						"20",
+						"85"
+					],
+					"path": [
+						"api",
+						"v1",
+						"network-device"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get device by name",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1YmU1ZmNhZGVlOWE2NzAwNGNmOTRkNmUiLCJhdXRoU291cmNlIjoiaW50ZXJuYWwiLCJ0ZW5hbnROYW1lIjoiVE5UMCIsInJvbGVzIjpbIjViZTVmY2FjZWU5YTY3MDA0Y2Y5NGQ2ZCJdLCJ0ZW5hbnRJZCI6IjViZTVmY2FhZWU5YTY3MDA0Y2Y5NGQ2YiIsImV4cCI6MTU1ODY0MDI3OCwidXNlcm5hbWUiOiJhZG1pbiJ9.h-oVyG_WwBcYEPKM2LcB4pu7VFfhwlyq8IRuZW2LGZ8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://10.10.20.85/api/v1/network-device?hostname=leaf2.abc.inc",
+					"protocol": "https",
+					"host": [
+						"10",
+						"10",
+						"20",
+						"85"
+					],
+					"path": [
+						"api",
+						"v1",
+						"network-device"
+					],
+					"query": [
+						{
+							"key": "hostname",
+							"value": "leaf2.abc.inc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all templates",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Auth-Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1YmU1ZmNhZGVlOWE2NzAwNGNmOTRkNmUiLCJhdXRoU291cmNlIjoiaW50ZXJuYWwiLCJ0ZW5hbnROYW1lIjoiVE5UMCIsInJvbGVzIjpbIjViZTVmY2FjZWU5YTY3MDA0Y2Y5NGQ2ZCJdLCJ0ZW5hbnRJZCI6IjViZTVmY2FhZWU5YTY3MDA0Y2Y5NGQ2YiIsImV4cCI6MTU1ODY0MDI3OCwidXNlcm5hbWUiOiJhZG1pbiJ9.h-oVyG_WwBcYEPKM2LcB4pu7VFfhwlyq8IRuZW2LGZ8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://10.10.20.85/api/v2/template-programmer/template",
+					"protocol": "https",
+					"host": [
+						"10",
+						"10",
+						"20",
+						"85"
+					],
+					"path": [
+						"api",
+						"v2",
+						"template-programmer",
+						"template"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get template by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Auth-Token",
+						"type": "text",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1YjZjZmJlNjU0MTMyNTAwODlkMDQ2MDIiLCJhdXRoU291cmNlIjoiaW50ZXJuYWwiLCJ0ZW5hbnROYW1lIjoiVE5UMCIsInJvbGVzIjpbIjViNmNmYmU0NTQxMzI1MDA4OWQwNDYwMSJdLCJ0ZW5hbnRJZCI6IjViNmNmYmUzNTQxMzI1MDA4OWQwNDVmZiIsImV4cCI6MTU1Nzg2MDU3MywidXNlcm5hbWUiOiJhZG1pbiJ9.RVbPJJboJGfWMpPUcFeucySPTAp3a5s4_yLM5oafGWQ"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://10.10.20.85/api/v2/template-programmer/template/5bf47d2a-7485-4ece-8358-3a829ecf8092",
+					"protocol": "https",
+					"host": [
+						"10",
+						"10",
+						"20",
+						"85"
+					],
+					"path": [
+						"api",
+						"v2",
+						"template-programmer",
+						"template",
+						"5bf47d2a-7485-4ece-8358-3a829ecf8092"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deploy template by id",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Auth-Token",
+						"type": "text",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1YmU1ZmNhZGVlOWE2NzAwNGNmOTRkNmUiLCJhdXRoU291cmNlIjoiaW50ZXJuYWwiLCJ0ZW5hbnROYW1lIjoiVE5UMCIsInJvbGVzIjpbIjViZTVmY2FjZWU5YTY3MDA0Y2Y5NGQ2ZCJdLCJ0ZW5hbnRJZCI6IjViZTVmY2FhZWU5YTY3MDA0Y2Y5NGQ2YiIsImV4cCI6MTU1ODY0MDI3OCwidXNlcm5hbWUiOiJhZG1pbiJ9.h-oVyG_WwBcYEPKM2LcB4pu7VFfhwlyq8IRuZW2LGZ8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"templateId\": \"b442dfd7-8bd9-4df9-b332-a3f6e2e55731\",\r\n    \"targetInfo\": [\r\n    \t{\r\n    \t\t\"type\": \"MANAGED_DEVICE_UUID\",\r\n    \t\t\"id\": \"5f72c269-391f-4986-aec4-f10501ea9934\",\r\n    \t\t\"params\": {\r\n    \t\t\t\"interface\": \"t1/0/10\",\r\n    \t\t\t\"description\": \"Configured by postman\"\r\n    \t\t}\r\n    \t}\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "https://10.10.20.85/api/v2/template-programmer/template/deploy",
+					"protocol": "https",
+					"host": [
+						"10",
+						"10",
+						"20",
+						"85"
+					],
+					"path": [
+						"api",
+						"v2",
+						"template-programmer",
+						"template",
+						"deploy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get task by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Auth-Token",
+						"type": "text",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1YmU1ZmNhZGVlOWE2NzAwNGNmOTRkNmUiLCJhdXRoU291cmNlIjoiaW50ZXJuYWwiLCJ0ZW5hbnROYW1lIjoiVE5UMCIsInJvbGVzIjpbIjViZTVmY2FjZWU5YTY3MDA0Y2Y5NGQ2ZCJdLCJ0ZW5hbnRJZCI6IjViZTVmY2FhZWU5YTY3MDA0Y2Y5NGQ2YiIsImV4cCI6MTU1ODY0MDI3OCwidXNlcm5hbWUiOiJhZG1pbiJ9.h-oVyG_WwBcYEPKM2LcB4pu7VFfhwlyq8IRuZW2LGZ8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://10.10.20.85/api/v1/task/142ce4b7-2ae4-4314-9187-c6b3c13cab10",
+					"protocol": "https",
+					"host": [
+						"10",
+						"10",
+						"20",
+						"85"
+					],
+					"path": [
+						"api",
+						"v1",
+						"task",
+						"142ce4b7-2ae4-4314-9187-c6b3c13cab10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get deploy status by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Auth-Token",
+						"type": "text",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1YmU1ZmNhZGVlOWE2NzAwNGNmOTRkNmUiLCJhdXRoU291cmNlIjoiaW50ZXJuYWwiLCJ0ZW5hbnROYW1lIjoiVE5UMCIsInJvbGVzIjpbIjViZTVmY2FjZWU5YTY3MDA0Y2Y5NGQ2ZCJdLCJ0ZW5hbnRJZCI6IjViZTVmY2FhZWU5YTY3MDA0Y2Y5NGQ2YiIsImV4cCI6MTU1ODY0MDI3OCwidXNlcm5hbWUiOiJhZG1pbiJ9.h-oVyG_WwBcYEPKM2LcB4pu7VFfhwlyq8IRuZW2LGZ8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://10.10.20.85/api/v1/template-programmer/template/deploy/status/da44c98e-4cd0-424b-976f-41be026b4f98",
+					"protocol": "https",
+					"host": [
+						"10",
+						"10",
+						"20",
+						"85"
+					],
+					"path": [
+						"api",
+						"v1",
+						"template-programmer",
+						"template",
+						"deploy",
+						"status",
+						"da44c98e-4cd0-424b-976f-41be026b4f98"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
